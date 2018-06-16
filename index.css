@@ -1,0 +1,271 @@
+body {
+  background-image: url("images/pencilbackgroundd.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-position-y: top;
+  background-color: #a4d6e1;
+}
+
+@media screen and (max-width: 500px){
+  body {
+    background-image: url("images/pencilbackground480.jpg");
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px){
+  body {
+    background-image: url("images/pencilbackground768.jpg");
+  }
+}
+
+@media screen and (min-width: 800px){
+  body {
+    background-image: url("images/pencilbackgroun1024.jpg");
+    background-size: 1024px;
+    background-position-y: -20px;
+  }  
+}
+
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  .mainArea {
+    font-size: -10%;
+    padding-top: 2px;
+  }
+  #logo {
+    font-size: -90%;
+  }  
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  .mainArea {
+    font-size: -10%;
+  }
+  #logo {
+    font-size: -10%;
+  }  
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .mainArea {
+    font-size: -.5em;
+  }
+  #logo {
+    font-size: -.5em;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .mainArea {
+    font-size: -10%;
+  }
+  #logo {
+    font-size: -10%;
+  }  
+}
+
+
+/* If the screen size is 601px or morex */
+@media only screen and (min-width: 601px)and (orientation : portrait) {
+  .mainArea {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 800px)and (orientation : portrait) {
+  .mainArea {
+    font-size: 1.3em;
+  }
+}
+
+
+
+
+.bodyContainer {
+  position: relative;
+  top: 150px;
+  margin: 0 auto;
+  font-family: Roboto, Verdana, Arial, Times, sans-serif;
+  font-size: 1.2em;
+  padding: 20px;
+  text-align: center;
+}
+
+@font-face {
+    font-family: 'Norwester';
+    src: url('fonts/Norwester.otf') format('otf');
+}
+
+#logo {
+  font-family: Norwester, Roboto;
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+
+.scoreqn {
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.mainArea {
+  padding-top: 10px;
+}
+.qandabox {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.submitanswer {
+  transform: translateX(-50%);
+}
+
+
+.question {
+  background: #bfe2ea;
+  padding-left: 20px;
+  padding-right: 20px;
+   
+  font-size: 1.5em;
+  width: area; 
+  height: area;
+  overflow-wrap: break-word;
+  text-align: left;
+  
+}
+
+
+
+
+
+
+
+
+
+/* SUBMIT BUTTONS  /////////////////////////// */
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 15px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+/* RADIO BUTTONS  /////////////////////////// */
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-left: 45px;
+    cursor: pointer;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
